@@ -15,20 +15,57 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <Parent />
+        <h3>propObject is: {this.props.propObject.text1}</h3>
+        <h3>propString is: {this.props.propString}</h3>
+        <h3>propInt is: {this.props.propInt}</h3>
+        <h3>propArray is: {this.props.propArray.map((item) => {return item + ", "})}</h3>
       </div>
     );
   }
 }
 
+// We can assign types to props along with .isRequired
+App.propTypes = {
+  propObject: React.PropTypes.object,
+  propString: React.PropTypes.string.isRequired,
+  propInt: React.PropTypes.number,
+  propFunction: React.PropTypes.func,
+  propArray: React.PropTypes.array,
+}
+
+// Defining App props with App.defaultProps
+App.defaultProps = {
+  propObject: {
+    text1: "1st object string",
+    text2: "2nd object string"
+  },
+  propString: "This is a string, it's also a required prop",
+  propInt: 23,
+  propArray: ["Cat", "dog", "mouse"],
+}
+
+
 // Parent component that Displays the child component
+// We create our default State in our constructor!
+  // Whenever the class is used, the first thing triggered is the constructor, so
+  // setting the state there is a good idea
 class Parent extends Component {
+  constructor(props){
+    super(props);
+
+    // used to set the default state, like in .defaultProps
+    this.state = {
+      cars: ["state-Honda", "state-BMW", "state-Nissan"]
+    };
+  }
+
   render(){
     return(
       <div>
         <h2>This is a parent component</h2>
         <Child message="This is the parent's prop, accessed from the child!"
                model="9999"
-               myCars={this.props.cars} />
+               myCars={this.state.cars} />
       </div>
     );
   }
@@ -50,9 +87,11 @@ class Child extends Component {
         <h3>I am from the child component, but being called from the Parent</h3>
         <p>{this.props.message}</p>
         <p>{this.props.model}</p>
-        <p>{this.props.myCars.map(
-            (item, i) => {return " " + item }
-        )}</p>
+        <div>
+          {this.props.myCars.map(
+              (item, i) => {return <p key={i}> {item} </p>;}
+          )}
+        </div>
       </div>
     );
   }

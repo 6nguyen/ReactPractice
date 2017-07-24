@@ -55,15 +55,27 @@ class Parent extends Component {
 
     // used to set the default state, like in .defaultProps
     this.state = {
-      cars: ["state-Honda", "state-BMW", "state-Nissan"]
+      cars: ["state-Honda", "state-BMW", "state-Nissan", "state-Toyota"]
     };
+    // Syntactical sugar: You must always bind the click event
+      // you can also bind in render: <h2 onClick={this.handleClick.bind(this)>}
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(
+      {cars: this.state.cars.reverse()}
+    );
   }
 
   render(){
     return(
       <div>
-        <h2>This is a parent component</h2>
-        <Child message="This is the parent's prop, accessed from the child!"
+        <h2>This is a parent component.</h2>
+        <button onClick={this.handleClick}  >
+          Reverse Cars
+        </button>
+        <Child  message="This is the parent's prop, accessed from the child!"
                model="9999"
                myCars={this.state.cars} />
       </div>

@@ -29,7 +29,7 @@ class Body extends Component {
     };
     this.getRandomNumber = this.getRandomNumber.bind(this);
   }
-  //
+  // Step 7:  Create method to generate a random number between 0 - 99
   getRandomNumber() {
     console.log("getRandomNumber() called");
     this.setState(
@@ -56,7 +56,15 @@ class Body extends Component {
 
 // Step 3:  Create a Numbers component to store the random Number
 // Step 6:  Add number generated in Body
+// Step 8:  Create componentWillMount and componentDidMount funcs
+  // order you place fun doesn't matter, they will call themselves in correct order
+// Step 9:  Create componentWillReceiveProps.  Only calls when comp receives a prop
 class Numbers extends Component {
+
+  componentWillMount() {
+    console.log("componentWillMount called");
+  }
+
   render(){
     return(
       <div>
@@ -64,6 +72,33 @@ class Numbers extends Component {
       </div>
     );
   }
+
+  componentDidMount() {
+    console.log("componentDidMount called");
+  }
+
+  componentWillReceiveProps(newProps) {
+    console.log("componentWillReceiveProps called");
+  }
+
+  shouldComponentUpdate(newProps, nextState) {
+    console.log("shouldComponentUpdate called");
+    return true;
+  }
+
+  componentWillUpdate(newProps, nextState) {
+    console.log("componentWillUpdate called");
+  }
+
+  componentDidUpdate(newProps, nextState) {
+    console.log("componentDidUpdate called");
+  }
+
+  componentWillUnmount() {
+    console.log("componentWillUnmount called");
+  }
+
 }
+
 
 export default App;

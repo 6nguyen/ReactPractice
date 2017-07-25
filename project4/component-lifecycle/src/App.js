@@ -97,7 +97,6 @@ class Numbers extends Component {
   componentWillUnmount() {
     console.log("componentWillUnmount called");
   }
-
 }
 
 

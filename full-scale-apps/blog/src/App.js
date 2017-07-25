@@ -48,7 +48,7 @@ class App extends Component {
                     <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div className="site-heading">
                             <h1>Clean Blog</h1>
-                            <hr className="small">
+                            <hr className="small" />
                             <span className="subheading">A Clean Blog Theme by Start Bootstrap</span>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ class App extends Component {
                         </a>
                         <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
                     </div>
-                    <hr>
+                    <hr/>
                     <div className="post-preview">
                         <a href="post.html">
                             <h2 className="post-title">
@@ -80,7 +80,7 @@ class App extends Component {
                         </a>
                         <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
                     </div>
-                    <hr>
+                    <hr/>
                     <div className="post-preview">
                         <a href="post.html">
                             <h2 className="post-title">
@@ -92,7 +92,7 @@ class App extends Component {
                         </a>
                         <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
                     </div>
-                    <hr>
+                    <hr/>
                     <div className="post-preview">
                         <a href="post.html">
                             <h2 className="post-title">
@@ -104,7 +104,7 @@ class App extends Component {
                         </a>
                         <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
                     </div>
-                    <hr>
+                    <hr/>
                     {/* Pager */}
                     <ul className="pager">
                         <li className="next">
@@ -115,7 +115,7 @@ class App extends Component {
             </div>
         </div>
 
-        <hr>
+        <hr/>
 
         {/* Footer */}
         <footer>

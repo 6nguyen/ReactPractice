@@ -62,6 +62,7 @@ class Parent extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
+  // reverses the order of array cars created in Parent constructor
   handleClick() {
     this.setState(
       {cars: this.state.cars.reverse()}

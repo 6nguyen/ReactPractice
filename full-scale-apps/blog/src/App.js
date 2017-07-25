@@ -6,10 +6,10 @@ class App extends Component {
   render() {
     return (
       <div>
-      <!-- Navigation -->
+      {/* Navigation */}
         <nav className="navbar navbar-default navbar-custom navbar-fixed-top">
             <div className="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
+                {/* Brand and toggle get grouped for better mobile display */}
                 <div className="navbar-header page-scroll">
                     <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span className="sr-only">Toggle navigation</span>
@@ -18,7 +18,7 @@ class App extends Component {
                     <a className="navbar-brand" href="index.html">Start Bootstrap</a>
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
+                {/* Collect the nav links, forms, and other content for toggling */}
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul className="nav navbar-nav navbar-right">
                         <li>
@@ -35,13 +35,13 @@ class App extends Component {
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
+                {/* /.navbar-collapse */}
             </div>
-            <!-- /.container -->
+            {/* /.container */}
         </nav>
 
-        <!-- Page Header -->
-        <!-- Set your background image for this header on the line below. -->
+        {/* Page Header */}
+        {/* Set your background image for this header on the line below. */}
         <header className="intro-header" style="background-image: url('img/home-bg.jpg')">
             <div className="container">
                 <div className="row">
@@ -56,7 +56,7 @@ class App extends Component {
             </div>
         </header>
 
-        <!-- Main Content -->
+        {/* Main Content */}
         <div className="container">
             <div className="row">
                 <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -105,7 +105,7 @@ class App extends Component {
                         <p className="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
                     </div>
                     <hr>
-                    <!-- Pager -->
+                    {/* Pager */}
                     <ul className="pager">
                         <li className="next">
                             <a href="#">Older Posts &rarr;</a>
@@ -117,7 +117,7 @@ class App extends Component {
 
         <hr>
 
-        <!-- Footer -->
+        {/* Footer */}
         <footer>
             <div className="container">
                 <div className="row">

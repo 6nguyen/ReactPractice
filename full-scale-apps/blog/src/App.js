@@ -42,9 +42,9 @@ class App extends Component {
 
         {/* Page Header */}
         {/* Set your background image for this header on the line below. */}
-        <header className="intro-header">
+        <header className="intro-header cover-image">
             <div className="container">
-                <div className="row"> 
+                <div className="row">
                     <div className="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div className="site-heading">
                             <h1>Clean Blog</h1>

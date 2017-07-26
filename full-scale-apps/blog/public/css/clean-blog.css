@@ -405,3 +405,7 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #0085A1;
 }
+
+.cover-image{
+  background: url(../img/home-bg.jpg);
+}

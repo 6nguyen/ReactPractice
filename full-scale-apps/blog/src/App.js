@@ -11,7 +11,6 @@ class App extends Component {
       <div>
         <Navbar />
         <Header />
-        <Footer />
 
 
         {/* Main Content */}
@@ -74,6 +73,8 @@ class App extends Component {
         </div>
 
         <hr/>
+
+        <Footer />
 
 
       </div>
